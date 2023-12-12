@@ -1,0 +1,208 @@
+.main-dashboard {
+    display: flex;
+    flex-direction: column;
+    margin: 2em;
+}
+
+.dashboard-container, .projects-list-container, .contact-requests {
+    max-width: 800px;
+    width: 100%;
+    margin: 1em auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.6);
+    box-sizing: border-box;
+}
+
+.dashboard-container h1,
+.contact-requests h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dashboard-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dashboard-form {
+    margin-bottom: 20px;
+}
+
+.dashboard-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.dashboard-form input[type="text"], .dashboard-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-form textarea {
+    min-height: 120px;
+}
+
+.dashboard-form button {
+    padding: 10px 15px;
+    background-color: #6C493A;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.dashboard-form button:hover {
+    background-color: #836b4e;
+}
+
+.logout-button {
+    padding: 10px 15px;
+    background-color: #dc0f08da;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.logout-button:hover {
+    background-color: #c9302c;
+}
+
+.project-item {
+    background-color: #ffffff;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.project-item img {
+    width: 150px; 
+    height: 100px;
+    position: relative;
+    margin-right: 10px;
+}
+
+.delete-image-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px 5px;
+    background-color: rgb(47, 47, 47);
+    color: #d9534f;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 50%;
+}
+
+.delete-image-button:hover {
+    color: #c9302c;
+}
+
+.image-container {
+    display: inline-block;
+    position: relative;
+}
+
+.project-item .edit-button, .project-item .delete-button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.project-item .edit-button {
+    background-color: #b09a06;
+    color: white;
+}
+
+.project-item .edit-button:hover {
+    background-color: #e7c909;
+}
+
+.project-item .delete-button {
+    background-color: #dc0f08da;
+    color: white;
+    margin-left: 10px;
+}
+
+.project-item .delete-button:hover {
+    background-color: #c9302c;
+}
+
+.project-item .button-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.contact-request {
+    background-color: #ffffff;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.contact-request button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: #dc0f08da;
+    color: white;
+    margin-top: 10px;
+}
+
+.contact-request button:hover {
+    background-color: #c9302c;
+}
+
+.contact-request span {
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .dashboard-container,
+    .projects-list-container,
+    .contact-requests {
+        width: 90%;
+        margin: 1em auto; 
+    }
+}
+
+@media (min-width: 1024px) {
+    .main-dashboard {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .dashboard-container, .contact-requests {
+        width: 48%;
+    }
+
+    .projects-list-container {
+        width: 48%;
+    }
+}
